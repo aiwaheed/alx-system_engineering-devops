@@ -1,2 +1,2 @@
 #!/bin/bash
-chown -hR flexy:staff .
+chown -hR vincent:staff .
