@@ -1,1 +1,1 @@
-my name is betty
+PROJECT 0 : CHANGING USER TO BETTY

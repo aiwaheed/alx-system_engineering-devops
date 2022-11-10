@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
+# prints "Best School" 10 times using while loop but if on the 9th prints additional "hi"
 
-c=1
-while [ $c -le 10 ];
+a=0
+
+while [ $a -lt 10 ];
 do
-    echo "Best School"
-    if [ $c -eq 9 ]
-    then
-	echo "Hi"
-    fi
-    (( c=c+1 ))
+	echo "Best School"
+	if [ $a -eq 8 ]
+	then
+		echo "Hi"
+	fi
+	(( a=a+1 ))
 done
