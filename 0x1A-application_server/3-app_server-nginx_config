@@ -64,14 +64,13 @@ server {
         }
 
         location /airbnb-onepage/ {
-                 #server web-dynamic
+                 #server web-dynamics
                  proxy_pass http://0.0.0.0:5000/airbnb-onepage;
         }
 
-        location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
-        proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {
+                proxy_pass http://0.0.0.0:5001/number_odd_or_even/$1;
         }
-
         # pass PHP scripts to FastCGI server
         #
         #location ~ \.php$ {
@@ -90,3 +89,15 @@ server {
         #       deny all;
         #}
 }
+
+
+# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+#server {
+#       listen 80;
+#       listen [::]:80;
+#
+#       server_name example.com;
